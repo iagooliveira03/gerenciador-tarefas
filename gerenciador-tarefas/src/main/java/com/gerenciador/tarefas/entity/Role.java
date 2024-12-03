@@ -15,9 +15,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "roles")
+@Getter
+@Setter
 public class Role implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -34,33 +38,33 @@ public class Role implements Serializable {
 	@JsonBackReference
 	private List<Usuario> usuarios;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public PermissaoEnum getNome() {
-		return nome;
-	}
-
-	public void setNome(PermissaoEnum nome) {
-		this.nome = nome;
-	}
-
-	public List<Usuario> getUsuarios() {
-		return usuarios;
-	}
-
-	public void setUsuarios(List<Usuario> usuarios) {
-		this.usuarios = usuarios;
-	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+//	public Long getId() {
+//		return id;
+//	}
+//
+//	public void setId(Long id) {
+//		this.id = id;
+//	}
+//
+//	public PermissaoEnum getNome() {
+//		return nome;
+//	}
+//
+//	public void setNome(PermissaoEnum nome) {
+//		this.nome = nome;
+//	}
+//
+//	public List<Usuario> getUsuarios() {
+//		return usuarios;
+//	}
+//
+//	public void setUsuarios(List<Usuario> usuarios) {
+//		this.usuarios = usuarios;
+//	}
+//
+//	public static long getSerialversionuid() {
+//		return serialVersionUID;
+//	}
 
 
 }
